@@ -1,8 +1,9 @@
 const helloWorld = require('../controllers/helloWorld');
+var httpMocks = require('node-mocks-http');
 
 it('returns a Hello World object', () => {
 });
-const httpMocks = require('node-mocks-http');
+
 const request = httpMocks.createRequest({
   method: 'GET',
   url: '/'});

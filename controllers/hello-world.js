@@ -1,9 +1,10 @@
-const helloWorld = (req, res) => res.send('Hello World!'))
-module.exports = helloWorld;
+const express = require('express');
 
-const helloWorld = require('./controllers/helloWorld');
 const app = express();
 
-app.get('/', (req, res) => res.send({ message: 'Hello World!' }));
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+const helloWorld = (req, res) => res.send({ message: 'Hello World!' });
 
+module.exports = helloWorld;
+
+// app.get('/', (req, res) => res.send({ message: 'Hello World!' }));
+// const helloWorld = (req, res) => res.send({ message: 'Hello World!' });

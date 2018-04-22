@@ -1,6 +1,7 @@
-const express = require('express')
-const app = express()
+const express = require('express');
 
-app.get('/', (req, res) => res.send({ message: 'Hello World!'})
+const app = express();
+const helloWorld = require('./controllers/hello-World.js');
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.get('/', helloWorld);
+app.listen(3000, () => console.log('Example app Listening on port 3000'));
